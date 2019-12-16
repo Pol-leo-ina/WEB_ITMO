@@ -1,0 +1,208 @@
+#header{
+background: url(bg1.jpg) no-repeat;background-size: cover;
+width: 99%;
+height:130%;
+}
+
+#menu{
+background:black;
+width: 100%;
+height:4.5%;
+}
+
+#text{
+background:white;
+width: 100%;
+height:40%;
+}
+
+#bot{
+background: url(jumbotron_bg1.jpg) no-repeat; background-size: cover;
+width: 100%;
+height:100%;
+}
+
+#footer{
+background:black;
+ display: table-row;
+        
+}
+
+html, body { 
+    height: 100%; /* Высота родителя */
+    margin: 0; /* Убираем отступы у страницы */
+   position: relative;
+  overflow-x: hidden;
+  background: black}
+
+div {
+    height: 100%; /* Высота */ 
+    margin: 0px;
+    padding: 20px;
+    border: 0px solid #000;
+   }
+
+
+h1 {
+        font-size: 120pt;
+        font-family: Arial; 
+        line-height: 0.8;
+        letter-spacing: -0.05em;
+        color: white;
+        border-radius: 5em;
+        padding: 5em;
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+ h2 {
+		font-size: 20pt;
+		font-family: Calibri Light; 
+        color: white;
+        letter-spacing: 0.35em;
+        border-radius: 5em;
+        padding: 5em;
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+ 	}
+h3 {
+		font-size: 20pt;
+		font-family: Arial ; 
+        color: black;
+        line-height: 0.8;
+        border-radius: 5em;
+        padding: 5em;
+        position: absolute;
+        top: 155%;
+        left: 50%;
+        margin-right: -60%;
+        transform: translate(-50%, -50%);
+ 	}
+
+h4 {
+		font-size: 13pt;
+		font-family: Arial light; 
+        color: black;
+        line-height: 1.3;
+        padding: 11em;
+        position: absolute;
+        top: 170%;
+        left: 62%;
+        margin-right: -40%;
+        transform: translate(-50%, -50%);
+ 	}
+cnp {
+	 position: absolute;
+        top: 170%;
+        left: 25%;
+        margin-right: -60%;
+        transform: translate(-50%, -50%);
+
+}
+
+
+h5 {
+		font-size: 20pt;
+		font-family: Arial ; 
+        color: white;
+        line-height: 0.8;
+        border-radius: 5em;
+        padding: 5em;
+        position: absolute;
+        top: 230%;
+        left:78%;
+        margin-right: -60%;
+        transform: translate(-50%, -50%);
+}
+
+text1 {
+	font-size: 12pt;
+		font-family: Arial ; 
+        color: white;
+        line-height: 0.8;
+        border-radius: 5em;
+        padding: 5em;
+        position: absolute;
+        top: 242%;
+        left:74.5%;
+        margin-right: -60%;
+        transform: translate(-50%, -50%);
+
+}
+
+h6 {
+	font-size: 10pt;
+		font-family: Arial light; 
+        color: white;
+        position: absolute;
+        top: 295%;
+        left: 15%;
+        margin-right: -40%;
+        transform: translate(-50%, -50%);}
+        
+ ul.menu {
+    margin: 0; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+   }
+   ul.menu li {
+    color: white;
+    font-size: 15pt;
+    font-family: Arial light; 
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 100px; /* Отступ слева */
+    border: 1px solid #000; /* Рамка вокруг текста */
+    padding: 3px; /* Поля вокруг текста */
+   }
+
+   rr {
+background-color: blue;
+
+    padding: 27px;
+   }
+
+ .button1 {
+  display: inline-block;
+  background: #000000;
+  color: #fff;
+  padding: 15px;
+  border-radius: 0px;
+  text-decoration: none;
+  font-family: Tahoma;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 100;
+   position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+}
+.button1:hover {
+    background-color: #2196f3; 
+    color: white;
+}
+
+.button2 {
+  display: inline-block;
+  background: #2196f3;
+  color: #fff;
+  padding: 15px;
+  border-radius: 0px;
+  text-decoration: none;
+  font-family: Tahoma;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 100;
+   position: absolute;
+        top: 250%;
+        left:83%;
+        margin-right: -60%;
+        transform: translate(-50%, -50%);
+}
+.button2:hover {
+    background-color: #000000 ; 
+    color: white;
+}
