@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>Задания по вебчику из презентации</title>
+</head>
+<body  >
+ 
+<a name="А1">Анкор 1</a><br />
+<a name="А2">Анкор 2</a><br />
+
+<form name="Форма 1"></form>
+
+<img border="0" name="Sovushka" id= "Когда увидела задание" src="sova1.jpeg" alt="Я устала" width="300" height="240" />
+<img border="0" id= "Когда прошла тест на IQ"src="sova2.jpg" width="320" height="200" />
+<img border="0" id= "Когда пытаюсь не уснуть делая задание" src="sova3.jpeg" width="235" height="288" /><br />
+<input type="button" onclick="alignImg()" value="Выравнить изображение" /><br />
+
+<a id= "Статейка про матрицы. Матеша" href="https://habr.com/ru/post/277421/">Статейка про матрицы</a><br />
+<a id= "Статейка про работу нейронных сетей. ОГНП" href="https://neurohive.io/ru/osnovy-data-science/osnovy-nejronnyh-setej-algoritmy-obuchenie-funkcii-aktivacii-i-poteri/">Статейка про работу нейронных сетей</a><br />
+
+
+<script src ="1.js"></script>
+
+<form id="forma5" name="Форма 5" action="form_action.php" enctype="text/plain"  method="get"><br/><br/>
+
+	Кнопка:<br/>
+	15.	<input id = "knopka" name="knopka" type="button"  value="МОЯ КНОПКА"/>
+</form>
+
+<script src ="Knopka.js"></script><br/><br/><br/>
+
+Форма:
+<form id= "forma2" name="Форма 2"> 
+		 
+		Имя: <input type="text" name="имя" value="Imya" /><br />
+		Фамилия: <input type="text" name="Фамилия" value="Familia" /><br />
+</form>
+
+<form id="forma3" name="Форма 3" action="form_action.php" enctype="text/plain"  method="get">
+	
+	Любимое время суток: <input type="text" name="time"  /><br />
+  Любимая сова: <input type="text" name="sova" /><br />
+  <input type="button" onclick="formReset()" value="Сбросить форму" />
+</form>
+<script src ="Forma.js"></script>
+
+
+<form id= "forma4" name="Форма 4"> 
+		Имя: <input type="text" name="имя" value="Imya" /><br />
+		Фамилия: <input type="text" name="Фамилия" value="Familia" /><br />
+		<input type="button" onclick="formSubmit()" value="Отправить форму" /></form><br/><br/>
+
+Изображение:<br/>
+<script src ="Image.js"></script><br/>
+
+<input type="button" onclick="addBorder()" value="Добавить границу" />
+<br />
+<input type="button" onclick="changeSize()" value="Изменить размер изображения" />
+<br>
+
+ <script type="text/javascript">
+document.write("Название изображения: ");
+document.write(document.getElementById('Когда увидела задание').name);</script><br>
+<input type="button" onclick="changeSrc()" value="Изменить изображение" />
+
+<script src ="Event.js"></script><br/><br/><br/>
+
+События:<br/>
+<input type="button" onmousedown="whichButton1(event)" value="Кнопка мыши" /><br/>
+
+<input type="button" onkeyup="whichButton2(event)" value="Код клавиатуры" /><br/>
+
+<input type="button" onmousedown="show_coords(event)" value="Координаты курсора" /><br/>
+<input type="button" onmousedown="coordinates(event)" value="Координаты курсора отн экрана" /><br/>
+<!--onmousedown="whichElement(event)" для  определения на какой объект нажали-->
+
+<input type="button" onmousedown="getEventType(event)" value="тип события" /><br/><br/><br/>
+
+Таблицы:
+
+<table border="1" id="Таблица" width="80%" height="70%">
+<tr id="First">
+<td>я</td>
+<td>очень</td>
+<td><input type="button" value="Удалить" onclick="deleteRow(this)"></td>
+</tr>
+<tr id="tr1">
+<td>хочу</td>
+<td>не три</td>
+<td><input type="button" value="Удалить" onclick="deleteRow(this)"></td>
+</tr>
+</table>
+<br />
+<script src="Tablitsa.js"></script>
+<input type="button" onclick="changeBorder()" value="Изменить Границу"><br />
+<input type="button" onclick="padding()" value="Изменить Cellpadding">
+<input type="button" onclick="spacing()" value="Изменить Cellspacing"><br />
+<input type="button" onclick="aboveFrames()" value="Показать рамку сверху">
+<input type="button" onclick="belowFrames()" value="Показать рамку снизу"><br />
+<input type="button" onclick="createCaption()" value="Создать заголовок"><br />
+<input type="button" onclick="insRow()" value="Вставить строку">
+<input type="button" onclick="insCell()" value="Вставить ячейку"><br />
+<input type="button" onclick="rightAlign()" value="Выравнить строку по правому краю" /><br />
+<input type="button" onclick="centerAlign()" value="Выравнить строку по середине" /><br />
+<input type="button" onclick="botAlign()" value="Выравнить строку таблицы по низу" /><br />
+<input type="button" onclick="valignCell()" value="Вертикальное выранивание содержимого ячейки"><br />
+<input type="button" onclick="changeContent()" value="Изменить содержимое">
+<input type="button" onclick="setColSpan()" value="Изменить colspan">
+</body>
+</html>
