@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Запрос Ajax</title>
+        <style type="text/css"> 
+                body {
+                    background-color: black;
+                    color: white;
+                }
+
+                .obnovit {
+             background-image: url(https://img.icons8.com/doodle/50/000000/available-updates.png);
+             background-size: 28%; 
+             background-repeat: no-repeat;
+            padding-left: 40px;
+             padding-bottom: 15px;
+             border: 5px solid grey;
+             border-radius: 7px;
+             vertical-align: middle;
+             margin-top: 10px;
+             margin-right: 10px;
+             margin-bottom: 10px;
+             position: absolute;
+             top:2%;
+             left: 90%;
+
+         }
+             .obnovit:hover
+           {
+              background-color: orange ;
+              border-radius: 15px;
+              color:black;
+           }
+                
+        </style>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    </head>
+    <body>
+      <div class="refbt">  <button class="obnovit" s>Обновить страницу</button> </div>
+        <div class="content"></div>
+        <script>
+            $(`.obnovit`).click(function() {
+                $(`.content`).load(`https://inxaoc.github.io/example/ajax-1.html`);
+                jQuery.ajax({
+                    url: `https://inxaoc.github.io/example/ajax.json`,
+                    success: function(data) {
+                        let code = `<ul>`;
+                        code += (function makeList(data) {
+                            let subCode = ``;
+                            for (const a in data) {
+                                if (data.hasOwnProperty(a)) {
+                                    const element = data[a];
+                                    subCode += `<li>${a}: `;
+                                    if (typeof element === `object`) {
+                                        subCode += `<ul>`;
+                                        subCode += makeList(element);
+                                        subCode += `</ul>`;
+                                    } else if (typeof element === `array`) {
+                                        subCode;
+                                    } else {
+                                        subCode += `${element}`;
+                                    }
+                                    subCode += `</li>`;
+                                   
+                                }
+                            }
+                            return subCode;
+                        })(data);
+                        code += `</ul>`;
+                        $(`.content`).append(code);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

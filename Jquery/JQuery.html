@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    //1) перекрасить по классам
+        $(document).ready(function()
+        {
+            $(".first").css("color", "blue");
+            $(".second").css("color","grey");
+            $("p.blue").css("color", "darkblue");
+            $("p.green").css("color","orange");
+        });
+        //2)Отключить формы
+        //3) Нарисовать стрелочки, установить открытие ссылок в новой вкладке
+        $(document).ready(function(){
+            $("#disable").ready(function(){
+                $(".disable").attr("disabled", "");
+            })
+            $("a").prepend("&#8599;").attr("target","blank");
+        })
+
+          $(document).ready(function(){
+            $("#change").css("position", "fixed").css("background-color", "purple").css("color", "white").css("padding", "10px").css("border-radius", "10px").css("margin-left", "1350px");
+            //работа кнопочки
+            $("#change").click(function(){
+                $("a").removeAttr("target").html(function(index,check){
+                    if (check[0]=="↗")
+                    {
+                        return check.slice(1);
+                    }
+                })
+            })
+        })
+
+     //4) поменять http на https
+    $(document).ready(function(){
+        $("a").attr("href", function(index, check) {
+            check = check.split("http")
+            if (check[0]=='' && check[1][0]!='s')
+            {
+            check.splice[0,1];
+            return ('https'+check.join(''));
+            }
+            else
+            return (check.join('http'));
+            });
+
+     //эффекты таблицы
+        $("#b1").click(function(){
+            $("#hide").hide(1000);
+        });
+        
+        $("h5").css("color","purple")
+        $("#hide").click(function(){
+            $(this).hide();
+        });
+        $("#b2").click(function(){
+            $("#div3").fadeToggle("slow");
+        });
+        $("#b3").click(function() {
+            $("#move").animate({left:90});
+        });
+        $("#b4").click(function() {
+            $("#changecolor").css("color","red");
+        });
+        $("#b5").click(function() {
+            $("#fade").animate({opacity: '0.5'});
+        });
+        
+        
+    });
+</script>
+</head>
+<body bgcolor="black"; style ="color:white">
+
+
+
+<div>
+        <input type="button" name="comeback" value="Меняем" id="change">
+    </div>
+
+
+<h1>Задания по Jquery</h1>
+    <div><h3>Ссылки</h3>
+    <a href="https://habr.com/ru/post/277421/" class="first">Матеша, класс 1</a><br>
+    <a href="https://habr.com/ru/post/416071/" class="first">Машинное обучение, класс 1</a><br>
+    <a href="http://www.hdseason.ru/publ/lostfilm/chernoe_zerkalo/2-1-0-1845" class="second">Недосмотренный из-за дедлайнов сериал, класс 2</a><br>
+    <a href="http://government.ru/" class="second">Россия, класс 2</a><br>
+    <a href="http://htmlbook.ru/samlayout/blochnaya-verstka/blochnaya-model" class="first">Веб, класс 1</a></div>
+    <br>
+
+    <div><h3>Параграфы</h3>
+    <p class="blue">Я люблю сов</p>
+    <p class="green">Я не люблю опаздывать</p>
+    <p class="blue"> Я люблю спать</p>
+    <p class="green">Я не люблю дедлайны</p></div>
+    <br>
+
+
+<div>
+        <h3 >Как работа?</h3>
+        <form >
+            <input type="text" name="field1" size="100" placeholder="Поле" class="disable">
+            <br>
+            <input type="radio" name="field2" value="Раз" class="disable"> Классно
+            <br>
+            <input type="radio" name="field2" value="Два" class="disable"> Здорово
+            <br>
+            <input type="checkbox" name="field3" class="disable"> Прекрасно
+            <br><br>
+        </form>
+    </div>
+
+<table border="3" width="500" style=" position: absolute; top:5%; left: 30%">
+    
+    <tr>
+        <td>текст</td>
+        <td>эффект/анимация</td>
+    </tr>
+    <tr height="70">
+        <td width="250"><h5 id="changecolor">Я очень старалась, придумывая текст для этой графы</h5></td>
+        <td><button id="b4" style="color: white; background: purple">поменять цвет</button></td>
+    </tr>
+     <tr height="70">
+        <td width="250"><h5 id="fade" style=" color: white">Ярко</h5></td>
+        <td><button id="b5" style="color: white; background: purple">Выцветает</button></td>
+    </tr>
+    <tr height="70">
+        <td width="250">
+            <img id="div3" src="https://img.icons8.com/doodle/48/000000/crying.png">           
+
+        </td>
+        <td><button id="b2" style="color: white; background: purple">Спрятать грусть</button></td>
+    </tr>
+    <tr height="70">
+        <td width="250"><h5 id="hide">Cкретные материалы</h5></td>
+        <td><button id="b1" style="color: white; background: purple">Спрятать шторкой</button></td>
+    </tr>
+    <tr height="70">
+        <td width="250"><h5 id="move" style="position:absolute; top:78%; "><img src="https://img.icons8.com/dusk/64/000000/encashment-car.png"></h5></td>
+        <td><button id="b3" style="color: white; background: purple">Кчау</button></td>
+    </tr>
+   
+</table>
+<br><br>
+
+
+</body>
+</html>
