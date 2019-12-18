@@ -1,7 +1,7 @@
 function counter(str) {
   return str.split(/[, ]/).length;
 }
-let a = "<p>1. Я люблю вебчик?! "
+let a = "<p>1. Я люблю вебчик? ! "
 document.write(a, '<br>');
 document.write('2. Количество символов: ', a.length, '<br>')
 document.write('3. Количество букв: ', counter(a), '<br>');
@@ -9,7 +9,7 @@ document.write('4. URL: ', document.URL, '<br>');
 document.write('5. Имя протокола: ', document.location.protocol, '<br>');
 document.write('6. Имя Файла: ', document.location.pathname.split('.')[0], '<br>');
 document.write('7. Расширение файла: ', document.location.pathname.split('.')[1], '<br>');
-let GET_params = window.location.search.replace( '?', 'дада');
+let GET_params = window.location.search.replace( '?', '');
 document.write('8. Значения параметров: ', GET_params, '<br>');
 
 let anc = 'Анкорррчик';
